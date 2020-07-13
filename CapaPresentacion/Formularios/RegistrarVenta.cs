@@ -762,7 +762,6 @@ namespace CapaPresentacion
         private void cbClientes_Enter(object sender, EventArgs e)
         {
             CargarCBClientes();
-            cbClientes.DroppedDown = true;
             cbClientes.Focus();            
         }
 

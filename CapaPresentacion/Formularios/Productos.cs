@@ -186,9 +186,18 @@ namespace SFacturacion
             {
                 if (dgvProductos.SelectedRows.Count > 0)
                 {
-                    CantidadEtiquetasImprimir cantidadEtiquetasImprimir = new CantidadEtiquetasImprimir(dgvProductos.CurrentRow.Cells["Descripcion"].Value.ToString(),
+
+                    if (!Convert.ToBoolean(dgvProductos.CurrentRow.Cells["Servicio"].Value))
+                    {
+                        CantidadEtiquetasImprimir cantidadEtiquetasImprimir = new CantidadEtiquetasImprimir(dgvProductos.CurrentRow.Cells["Descripcion"].Value.ToString(),
                         dgvProductos.CurrentRow.Cells["CodigoBarra"].Value.ToString(), dgvProductos.CurrentRow.Cells["PrecioVenta"].Value.ToString());
-                    cantidadEtiquetasImprimir.ShowDialog();
+                        cantidadEtiquetasImprimir.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se le puede imprimir etiquetas a los servicios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 } 
                 else
                 {
