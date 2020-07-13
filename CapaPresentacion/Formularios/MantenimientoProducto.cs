@@ -32,11 +32,13 @@ namespace CapaPresentacion
         public MantenimientoProducto()
         {
             InitializeComponent();
+            CargarCbProveedores();
         }
 
         public MantenimientoProducto(Producto producto)
         {
             InitializeComponent();
+            CargarCbProveedores();
             LlenarTextBoxs(producto);
         }
 
@@ -52,8 +54,7 @@ namespace CapaPresentacion
         }
 
         private void MantenimientoProducto_Load(object sender, EventArgs e)
-        {
-            CargarCbProveedores();
+        {           
             txtCodigoBarra.Select();
         }
 
@@ -253,8 +254,7 @@ namespace CapaPresentacion
         {
             txtID.Text = producto.ProductoID.ToString();            
             txtDescripcion.Text = producto.Descripcion; 
-            txtExistencia.Text = producto.Existencia.ToString();
-            cbProveedor.SelectedValue = producto.ProveedorID;
+            txtExistencia.Text = producto.Existencia.ToString();            
             txtPrecioCompra.Text = producto.PrecioCompra.ToString();
             txtPrecioVenta.Text = producto.PrecioVenta.ToString();
             txtPrecioVentaMin.Text = producto.PrecioVentaMin.ToString();
@@ -265,6 +265,7 @@ namespace CapaPresentacion
             txtCodigoBarra.Text = producto.CodigoBarra.ToString();
             txtUnidadMedida.Text = producto.UnidadMedida.ToString();
             checkboxServicio.Checked = producto.Servicio;
+            cbProveedor.SelectedValue = producto.ProveedorID;
         }
 
         private void checkboxServicio_CheckedChanged(object sender, EventArgs e)
