@@ -476,6 +476,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.DecimalPlaces = 2;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtCantidad.Location = new System.Drawing.Point(438, 51);
             this.txtCantidad.Name = "txtCantidad";

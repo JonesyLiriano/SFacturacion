@@ -2152,8 +2152,8 @@
           <Property Type="Boolean" Name="ITBIS" Nullable="false" />
           <Property Type="Int32" Name="ClienteID" Nullable="false" />
           <Property Type="String" Name="NombreCliente" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="DireccionCliente" Nullable="false" MaxLength="200" />
-          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="DireccionCliente" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="ProductoID" Nullable="false" />
           <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
@@ -2174,8 +2174,8 @@
           <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="ClienteID" Nullable="false" />
-          <Property Type="String" Name="DireccionCliente" Nullable="false" MaxLength="200" />
-          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="DireccionCliente" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="proc_ValidarUsuario_Result">
           <Property Type="Int32" Name="UserID" Nullable="false" />
@@ -2306,8 +2306,8 @@
           <Property Type="Decimal" Name="ITBIS" Nullable="false" Precision="18" Scale="2" />
           <Property Type="Int32" Name="ClienteID" Nullable="false" />
           <Property Type="String" Name="NombreCliente" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="11" />
-          <Property Type="String" Name="ClienteDireccion" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ClienteDireccion" Nullable="true" MaxLength="200" />
           <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="UnidadMedida" Nullable="false" MaxLength="50" />
         </ComplexType>
@@ -2334,7 +2334,7 @@
         <ComplexType Name="proc_ComprobanteFacturaVenta_Result">
           <Property Type="Int32" Name="FacturaID" Nullable="false" />
           <Property Type="String" Name="NombreCliente" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="DireccionCliente" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="DireccionCliente" Nullable="true" MaxLength="200" />
           <Property Type="Decimal" Name="DescuentoCliente" Nullable="true" Precision="18" Scale="2" />
           <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
           <Property Type="String" Name="NCF" Nullable="false" MaxLength="50" />
@@ -2342,7 +2342,7 @@
           <Property Type="String" Name="TipoDePago" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="Cotizacion" Nullable="true" />
           <Property Type="DateTime" Name="FechaVencimiento" Nullable="true" />
-          <Property Type="String" Name="RNC" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="RNC" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Entidad" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="ProductoID" Nullable="false" />
@@ -2352,7 +2352,7 @@
           <Property Type="Decimal" Name="Descuento" Nullable="false" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="ITBIS" Nullable="false" Precision="18" Scale="2" />
           <Property Type="Int32" Name="ClienteID" Nullable="false" />
-          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="CedulaORncCliente" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="UnidadMedida" Nullable="false" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="proc_CargarProductosPorProveedor_Result">
@@ -2454,7 +2454,7 @@
           <Property Type="Decimal" Name="Descuento" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="ITBIS" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="SubTotal" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Valor" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Double" Name="Valor" Nullable="true" />
           <Property Type="String" Name="RNC" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Entidad" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
@@ -2473,7 +2473,7 @@
           <Property Type="Decimal" Name="Descuento" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="ITBIS" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="SubTotal" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Valor" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Double" Name="Valor" Nullable="true" />
           <Property Type="String" Name="RNC" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Entidad" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
@@ -2492,7 +2492,7 @@
           <Property Type="Decimal" Name="Descuento" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="ITBIS" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="SubTotal" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Valor" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Double" Name="Valor" Nullable="true" />
           <Property Type="String" Name="RNC" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Entidad" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />

@@ -59,7 +59,7 @@ namespace CapaPresentacion.Formularios
                 }
                 catch (Exception exc)
                 {
-                    MessageBox.Show("Error: " + exc.ToString(),
+                    MessageBox.Show("Error: No se ha podido facturar esta orden de compra, verifique los campos e intente nuevamente. ",
                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Loggeator.EscribeEnArchivo(exc.ToString());
                 }

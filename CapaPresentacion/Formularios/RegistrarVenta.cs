@@ -246,8 +246,7 @@ namespace CapaPresentacion
             {
                 itbisTotal += Convert.ToDecimal(Fila.Cells["ITBIS"].Value) * Convert.ToDecimal(Fila.Cells["Cantidad"].Value);
                 descuentoTotal += Convert.ToDecimal(Fila.Cells["Descuento"].Value) * Convert.ToDecimal(Fila.Cells["Cantidad"].Value);
-                subTotal += Convert.ToDecimal(Fila.Cells["Precio"].Value) * Convert.ToDecimal(Fila.Cells["Cantidad"].Value);
-
+                subTotal += Convert.ToDecimal(Fila.Cells["Precio"].Value) * Convert.ToDecimal(Fila.Cells["Cantidad"].Value);                
 
             }
 
@@ -1018,7 +1017,7 @@ namespace CapaPresentacion
             {
                 detalleFacturaEntidad.FacturaID = facturaID;
                 detalleFacturaEntidad.ProductoID = Convert.ToInt32(fila.Cells["ProductoID"].Value);
-                detalleFacturaEntidad.CantVen = Convert.ToDouble(fila.Cells["Cantidad"].Value);
+                detalleFacturaEntidad.CantVen = Convert.ToDouble(fila.Cells["Cantidad"].Value.ToString());
                 detalleFacturaEntidad.Precio = Convert.ToDecimal(fila.Cells["Precio"].Value);
                 detalleFacturaEntidad.ITBIS = Convert.ToDecimal(fila.Cells["ITBIS"].Value);
                 detalleFacturaEntidad.Descuento = Convert.ToDecimal(fila.Cells["Descuento"].Value);

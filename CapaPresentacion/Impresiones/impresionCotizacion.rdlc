@@ -1732,7 +1732,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FormatNumber(Sum(Fields!Precio.Value, "DataSetComprobanteCotizacion"),2)</Value>
+                      <Value>=FormatNumber(Sum(Fields!CantVen.Value * Fields!Precio.Value, "DataSetComprobanteCotizacion"),2)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontWeight>Normal</FontWeight>
@@ -1770,7 +1770,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FormatNumber(Sum(Fields!ITBIS.Value, "DataSetComprobanteCotizacion"),2)</Value>
+                      <Value>=FormatNumber(Sum(Fields!CantVen.Value * Fields!ITBIS.Value, "DataSetComprobanteCotizacion"),2)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                       </Style>
@@ -1807,7 +1807,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FormatNumber(Sum(Fields!Descuento.Value, "DataSetComprobanteCotizacion"), 2)</Value>
+                      <Value>=FormatNumber(Sum(Fields!CantVen.Value * Fields!Descuento.Value, "DataSetComprobanteCotizacion") + ((Fields!DescuentoCliente.Value / 100) * Sum(Fields!CantVen.Value * Fields!Precio.Value, "DataSetComprobanteCotizacion")) , 2)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                       </Style>
@@ -1844,7 +1844,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FormatNumber(SUM(Fields!CantVen.Value * (Fields!Precio.Value + Fields!ITBIS.Value - Fields!Descuento.Value), "DataSetComprobanteCotizacion"),2)</Value>
+                      <Value>=FormatNumber(SUM(Fields!CantVen.Value * (Fields!Precio.Value + Fields!ITBIS.Value - Fields!Descuento.Value), "DataSetComprobanteCotizacion") - (Sum(Fields!CantVen.Value * Fields!Descuento.Value, "DataSetComprobanteCotizacion") + ((Fields!DescuentoCliente.Value / 100) * Sum(Fields!CantVen.Value * Fields!Precio.Value, "DataSetComprobanteCotizacion"))),2)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontWeight>Bold</FontWeight>
