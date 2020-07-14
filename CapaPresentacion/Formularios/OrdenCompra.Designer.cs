@@ -52,7 +52,7 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBuscarProd = new System.Windows.Forms.Button();
-            this.btnFacturarOrdenCorte = new System.Windows.Forms.Button();
+            this.btnFacturarOrden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarraMenu)).BeginInit();
@@ -343,23 +343,23 @@
             this.btnBuscarProd.UseVisualStyleBackColor = false;
             this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
-            // btnFacturarOrdenCorte
+            // btnFacturarOrden
             // 
-            this.btnFacturarOrdenCorte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFacturarOrdenCorte.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnFacturarOrdenCorte.FlatAppearance.BorderSize = 0;
-            this.btnFacturarOrdenCorte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnFacturarOrdenCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturarOrdenCorte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturarOrdenCorte.ForeColor = System.Drawing.Color.White;
-            this.btnFacturarOrdenCorte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturarOrdenCorte.Location = new System.Drawing.Point(789, 297);
-            this.btnFacturarOrdenCorte.Name = "btnFacturarOrdenCorte";
-            this.btnFacturarOrdenCorte.Size = new System.Drawing.Size(180, 35);
-            this.btnFacturarOrdenCorte.TabIndex = 124;
-            this.btnFacturarOrdenCorte.Text = "Facturar Orden";
-            this.btnFacturarOrdenCorte.UseVisualStyleBackColor = false;
-            this.btnFacturarOrdenCorte.Click += new System.EventHandler(this.btnFacturarOrdenCorte_Click);
+            this.btnFacturarOrden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFacturarOrden.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnFacturarOrden.FlatAppearance.BorderSize = 0;
+            this.btnFacturarOrden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnFacturarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturarOrden.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturarOrden.ForeColor = System.Drawing.Color.White;
+            this.btnFacturarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturarOrden.Location = new System.Drawing.Point(789, 297);
+            this.btnFacturarOrden.Name = "btnFacturarOrden";
+            this.btnFacturarOrden.Size = new System.Drawing.Size(180, 35);
+            this.btnFacturarOrden.TabIndex = 124;
+            this.btnFacturarOrden.Text = "Facturar Orden";
+            this.btnFacturarOrden.UseVisualStyleBackColor = false;
+            this.btnFacturarOrden.Click += new System.EventHandler(this.btnFacturarOrdenCorte_Click);
             // 
             // OrdenCompra
             // 
@@ -367,7 +367,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.btnFacturarOrdenCorte);
+            this.Controls.Add(this.btnFacturarOrden);
             this.Controls.Add(this.btnBuscarProd);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnGuardar);
@@ -404,7 +404,7 @@
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBuscarProd;
-        private System.Windows.Forms.Button btnFacturarOrdenCorte;
+        private System.Windows.Forms.Button btnFacturarOrden;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;

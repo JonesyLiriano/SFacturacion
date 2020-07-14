@@ -92,7 +92,12 @@ namespace SFacturacion
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Esta seguro que desea salir del programa?", "Confirmacion para salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }                
         }
 
         private void iconmaximizar_Click(object sender, EventArgs e)

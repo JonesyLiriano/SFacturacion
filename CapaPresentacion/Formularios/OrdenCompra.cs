@@ -54,7 +54,7 @@ namespace CapaPresentacion.Formularios
                 btnGuardar.Enabled = false;
                 btnRecibirTodo.Enabled = false;
                 btnQuitar.Enabled = false;
-                btnFacturarOrdenCorte.Enabled = false;
+                btnFacturarOrden.Enabled = false;
             }
             CargarDataGridView();
         }
@@ -369,8 +369,7 @@ namespace CapaPresentacion.Formularios
                     else
                     {
                         CrearOrdenCompra();
-                    }
-                    this.Close();
+                    }                    
                 }
                 else
                 {
