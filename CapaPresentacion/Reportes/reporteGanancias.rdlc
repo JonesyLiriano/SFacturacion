@@ -426,11 +426,15 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Desde: </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!FSemana.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -705,11 +709,15 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Desde: </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!FSemana.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -952,11 +960,15 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Desde: </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!FSemana.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -966,7 +978,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
             <Top>0.95695in</Top>
-            <Left>4.68356in</Left>
+            <Left>4.68358in</Left>
             <Height>0.25in</Height>
             <Width>1.76916in</Width>
             <ZIndex>24</ZIndex>
@@ -1177,7 +1189,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.93403in</Top>
+              <Top>1.90625in</Top>
               <Left>0.32854in</Left>
               <Height>0.5in</Height>
               <Width>3.74633in</Width>
@@ -1326,6 +1338,7 @@
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <Format>dd/MM/yyyy hh:mm:ss tt</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>

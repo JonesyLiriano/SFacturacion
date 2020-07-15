@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,8 +31,14 @@ namespace CapaDatos
         public Tuple<decimal, decimal, decimal, decimal, decimal, decimal> CalcularGanancias(decimal itbis)
         {
             modelDB.proc_CalcularGanancias(gananciaFContDia, gananciaFContSemana, gananciaFContMes, gananciaFCredDia, gananciaFCredSemana, gananciaFCredtMes, itbis);
-
-            return Tuple.Create((decimal)gananciaFContDia.Value, (decimal)gananciaFContSemana.Value, (decimal)gananciaFContMes.Value, (decimal)gananciaFCredDia.Value, (decimal)gananciaFCredSemana.Value, (decimal)gananciaFCredtMes.Value);
+            
+            return Tuple.Create(
+                gananciaFContDia.Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFContDia.Value),
+                gananciaFContSemana. Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFContSemana.Value),
+                gananciaFContMes.Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFContMes.Value),
+                gananciaFCredDia.Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFCredDia.Value),
+                gananciaFCredSemana.Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFCredSemana.Value),
+                gananciaFCredtMes.Value == DBNull.Value ? Convert.ToDecimal(0.00) : Convert.ToDecimal(gananciaFCredtMes.Value));
         }
     }
 }
