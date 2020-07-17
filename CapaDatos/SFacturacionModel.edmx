@@ -661,12 +661,12 @@
           <Parameter Name="ProveedorID" Type="int" Mode="In" />
         </Function>
         <Function Name="proc_CalcularGanancias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="GananciaFContDia" Type="decimal" Mode="InOut" />
-          <Parameter Name="GananciaFContSemana" Type="decimal" Mode="InOut" />
-          <Parameter Name="GananciaFContMes" Type="decimal" Mode="InOut" />
-          <Parameter Name="GananciaFCredDia" Type="decimal" Mode="InOut" />
-          <Parameter Name="GananciaFCredSemana" Type="decimal" Mode="InOut" />
-          <Parameter Name="GananciaFCredMes" Type="decimal" Mode="InOut" />
+          <Parameter Name="GananciaFContDia" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
+          <Parameter Name="GananciaFContSemana" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
+          <Parameter Name="GananciaFContMes" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
+          <Parameter Name="GananciaFCredDia" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
+          <Parameter Name="GananciaFCredSemana" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
+          <Parameter Name="GananciaFCredMes" Type="decimal" Mode="InOut" Precision="18" Scale="2" />
           <Parameter Name="Itbis" Type="decimal" Mode="In" />
         </Function>
         <Function Name="proc_CargarCobrosVentaCredito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -2043,6 +2043,7 @@
           <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
           <Property Type="DateTime" Name="FechaVencimiento" Nullable="false" />
+          <Property Type="String" Name="NCFAfectado" Nullable="false" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="proc_CargarOrdenesCompraPFecha_Result">
           <Property Type="Int32" Name="ProveedorID" Nullable="false" />
@@ -2974,6 +2975,7 @@
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Cliente" ColumnName="Cliente" />
                 <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+                <ScalarProperty Name="NCFAfectado" ColumnName="NCFAfectado" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

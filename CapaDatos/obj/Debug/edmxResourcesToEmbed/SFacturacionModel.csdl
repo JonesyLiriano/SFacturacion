@@ -976,6 +976,7 @@
     <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
     <Property Type="DateTime" Name="FechaVencimiento" Nullable="false" />
+    <Property Type="String" Name="NCFAfectado" Nullable="false" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="proc_CargarOrdenesCompraPFecha_Result">
     <Property Type="Int32" Name="ProveedorID" Nullable="false" />

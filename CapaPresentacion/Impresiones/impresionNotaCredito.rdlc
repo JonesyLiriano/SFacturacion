@@ -1646,7 +1646,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FormatNumber(IIf(Fields!ITBIS.Value = true, (Fields!PrecioTotal.Value * (CDec(Parameters!ITBISActual.Value) / 100)), 0.00) ,2)</Value>
+                      <Value>=FormatNumber(
+IIf(Fields!ITBIS.Value = true, IIf(Parameters!ITBISActual.Value = 0, 0, Fields!PrecioTotal.Value - ( Fields!PrecioTotal.Value / (CDec(Parameters!ITBISActual.Value / 100) + 1)))
+ , 0.00)
+,2)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontWeight>Normal</FontWeight>
