@@ -372,6 +372,7 @@
           <ScalarProperty Name="MontoAplicado" ColumnName="MontoAplicado" />
           <ScalarProperty Name="Usuario" ColumnName="Usuario" />
           <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="NCFAfectado" ColumnName="NCFAfectado" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
