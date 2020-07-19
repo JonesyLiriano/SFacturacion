@@ -48,7 +48,7 @@ namespace CapaPresentacion.Impresiones
             for (int i = 0; i < cantidad; i++)
             {
                 ControladorImpresoraPapelA4 controladorImpresoraPapelA4 = new ControladorImpresoraPapelA4();
-                controladorImpresoraPapelA4.Imprime(CargarImpresionRV());
+                controladorImpresoraPapelA4.ImprimeLabel(CargarImpresionRV());
             }            
             this.Close();
         }
