@@ -597,7 +597,6 @@
     <EmbeddedResource Include="Reportes\ReporteTodasFacturas.resx">
       <DependentUpon>ReporteTodasFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CapaDatos.proc_ComprobanteCotizacion_Result.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
