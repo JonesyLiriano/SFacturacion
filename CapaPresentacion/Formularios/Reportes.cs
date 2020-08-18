@@ -177,5 +177,9 @@ namespace CapaPresentacion.Formularios
                 Loggeator.EscribeEnArchivo(exc.ToString());
             }
         }
+        private void pictureBoxFacturasRapida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

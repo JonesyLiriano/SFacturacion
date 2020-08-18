@@ -20,5 +20,6 @@ namespace CapaDatos
         public string Cliente { get; set; }
         public string Usuario { get; set; }
         public Nullable<int> Factura { get; set; }
+        public string TipoDePago { get; set; }
     }
 }

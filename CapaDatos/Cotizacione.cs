@@ -26,6 +26,7 @@ namespace CapaDatos
         public int UserID { get; set; }
         public bool Facturada { get; set; }
         public Nullable<decimal> DescuentoCliente { get; set; }
+        public Nullable<int> TipoPagoID { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual User User { get; set; }

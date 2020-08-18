@@ -129,6 +129,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4EC6FBA728BE4B5DA39AA194B0391809"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5531EBA4BCCB49D48962B93146452B94"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -167,6 +173,12 @@
         {
         "MsmKey" = "8:_5A63BBDD7260915747FFED28BB7F5AFD"
         "OwnerKey" = "8:_9FBD130AAF51A466AFFE5F3FDEF5CFA6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_69B7962EFAFD4EA5AF54423B7F358280"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -239,6 +251,12 @@
         {
         "MsmKey" = "8:_83F15FBD7D68E6E384FDD65ECB62BE7F"
         "OwnerKey" = "8:_74F104D3C67244A4A0B8CF5AAFFE69EA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8671C5A9A4774E2589FE4A50E54A92A2"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -435,6 +453,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CD5D1719215041F5B86B0CB38E02B394"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D327B406CE1290F51F1871562BF75606"
         "OwnerKey" = "8:_B76F8C1014E84EB7A31355A6CE444A8B"
         "MsmSig" = "8:_UNDEFINED"
@@ -551,6 +575,12 @@
         {
         "MsmKey" = "8:_FB748B1099350192645D4817ABB8357F"
         "OwnerKey" = "8:_9A6B3D1B4F72451BF8C26368104583A9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD87C6CF50E24157881866725815F0EA"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1113,6 +1143,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EC6FBA728BE4B5DA39AA194B0391809"
+            {
+            "SourcePath" = "8:..\\CapaPresentacion\\Impresiones\\impresionTermicaFacturaVenta.rdlc"
+            "TargetName" = "8:impresionTermicaFacturaVenta.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_427249BB3C3D4382BEEB4A10F40DE901"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5531EBA4BCCB49D48962B93146452B94"
             {
             "SourcePath" = "8:..\\CapaPresentacion\\Reportes\\reporteFacturasCompra.rdlc"
@@ -1162,6 +1212,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69B7962EFAFD4EA5AF54423B7F358280"
+            {
+            "SourcePath" = "8:..\\CapaPresentacion\\Impresiones\\impresionTermicaCotizacion.rdlc"
+            "TargetName" = "8:impresionTermicaCotizacion.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_427249BB3C3D4382BEEB4A10F40DE901"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CCE8E7EBB2143C9BBB6CEC1AA6A7AFE"
@@ -1357,6 +1427,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8671C5A9A4774E2589FE4A50E54A92A2"
+            {
+            "SourcePath" = "8:..\\CapaPresentacion\\Impresiones\\impresionTermicaOrdenCompra.rdlc"
+            "TargetName" = "8:impresionTermicaOrdenCompra.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_427249BB3C3D4382BEEB4A10F40DE901"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89C00371863340B8BA2A7BB8E7D332A2"
@@ -1862,6 +1952,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CD5D1719215041F5B86B0CB38E02B394"
+            {
+            "SourcePath" = "8:..\\CapaPresentacion\\Impresiones\\impresionTermicaReciboCobro.rdlc"
+            "TargetName" = "8:impresionTermicaReciboCobro.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_427249BB3C3D4382BEEB4A10F40DE901"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D327B406CE1290F51F1871562BF75606"
             {
             "AssemblyRegister" = "3:1"
@@ -2097,6 +2207,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD87C6CF50E24157881866725815F0EA"
+            {
+            "SourcePath" = "8:..\\CapaPresentacion\\Impresiones\\impresionTermicaNotaCredito.rdlc"
+            "TargetName" = "8:impresionTermicaNotaCredito.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_427249BB3C3D4382BEEB4A10F40DE901"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }

@@ -43,7 +43,7 @@ namespace SFacturacion
                 btnCXP.Enabled = false;
                 btnConfiguraciones.Enabled = false;
             }
-        }      
+        }
 
         private void ActivarScrollBar()
         {
@@ -56,7 +56,7 @@ namespace SFacturacion
 
         private void DesactivarScrollBar()
         {
-            MenuVertical.AutoScroll = false;            
+            MenuVertical.AutoScroll = false;
         }
 
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -76,7 +76,8 @@ namespace SFacturacion
                 {
                     MenuVertical.Width = 250;
                 }
-            } else
+            }
+            else
             {
                 if (MenuVertical.Width == 250)
                 {
@@ -86,7 +87,7 @@ namespace SFacturacion
                 {
                     MenuVertical.Width = 250;
                 }
-            }     
+            }
             SeleccionarButton(panelContenedor.Controls[0].Text);
         }
 
@@ -97,7 +98,7 @@ namespace SFacturacion
             {
                 Application.Exit();
 
-            }                
+            }
         }
 
         private void iconmaximizar_Click(object sender, EventArgs e)
@@ -113,7 +114,7 @@ namespace SFacturacion
         }
 
         private void iconrestaurar_Click(object sender, EventArgs e)
-        {            
+        {
             this.WindowState = FormWindowState.Normal;
             iconrestaurar.Visible = false;
             iconmaximizar.Visible = true;
@@ -122,7 +123,7 @@ namespace SFacturacion
         private void iconminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }       
+        }
 
         private void AbrirFormEnPanel<MiForm>() where MiForm : Form, new()
         {
@@ -146,7 +147,7 @@ namespace SFacturacion
                     fh.BringToFront();
                 }
                 else
-                {                                      
+                {
                     fh.BringToFront();
 
                 }
@@ -304,7 +305,7 @@ namespace SFacturacion
             CerrarFormulariosAntesAbrirVentas();
             AbrirFormEnPanel<TabsFormularioVentas>();
             SeleccionarButton("TabsFormularioVentas");
-            
+
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -324,7 +325,7 @@ namespace SFacturacion
             CerrarFormularioCuentasPorPagarYProductos();
             AbrirFormEnPanel<Compras>();
             SeleccionarButton("Compras");
-            
+
         }
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
@@ -334,7 +335,7 @@ namespace SFacturacion
 
         private void panelContenedor_ControlRemoved(object sender, ControlEventArgs e)
         {
-            if(panelContenedor.Controls.Count == 0)
+            if (panelContenedor.Controls.Count == 0)
             {
                 btnlogoInicio_Click(null, e);
             }
@@ -363,11 +364,11 @@ namespace SFacturacion
         {
             foreach (Control item in panelContenedor.Controls)
             {
-               if (item.Text == "Cotizaciones" || item.Text == "Facturas" || item.Text == "CuentasPorCobrar" || item.Text == "Productos")
+                if (item.Text == "Cotizaciones" || item.Text == "Facturas" || item.Text == "CuentasPorCobrar" || item.Text == "Productos")
                 {
                     panelContenedor.Controls.Remove(item);
                 }
-            }            
+            }
         }
         private void CerrarFormularioCuentasPorPagarYProductos()
         {
@@ -413,7 +414,7 @@ namespace SFacturacion
             CerrarFormularioCuentasPorCobrarYProductos();
             AbrirFormEnPanel<NotasCredito>();
             SeleccionarButton("NotasCredito");
-           
+
         }
 
         private void btnCXC_Click(object sender, EventArgs e)

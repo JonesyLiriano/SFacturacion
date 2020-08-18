@@ -39,22 +39,29 @@
             this.btnImprimirEtiqueta = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnMovimientos = new System.Windows.Forms.Button();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVentaMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servicio = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CodigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ITBIS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVentaMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProveedorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -114,17 +121,17 @@
             this.dgvProductos.ColumnHeadersHeight = 30;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Descripcion,
+            this.PrecioVenta,
+            this.PrecioVentaMin,
+            this.UnidadMedida,
+            this.Existencia,
+            this.PrecioCompra,
             this.ProductoID,
             this.Servicio,
             this.CodigoBarra,
-            this.Descripcion,
             this.Proveedor,
-            this.UnidadMedida,
-            this.Existencia,
             this.ITBIS,
-            this.PrecioCompra,
-            this.PrecioVenta,
-            this.PrecioVentaMin,
             this.Descuento,
             this.CantMin,
             this.CantMax,
@@ -244,6 +251,126 @@
             this.cbFiltro.TabIndex = 85;
             this.cbFiltro.Validating += new System.ComponentModel.CancelEventHandler(this.cbFiltro_Validating);
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label1);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.label18);
+            this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox6.Location = new System.Drawing.Point(906, 373);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(180, 149);
+            this.groupBox6.TabIndex = 105;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "ATAJOS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.Location = new System.Drawing.Point(11, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 19);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "F2 = Seleccionar Grid.";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label20.Location = new System.Drawing.Point(11, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(115, 19);
+            this.label20.TabIndex = 89;
+            this.label20.Text = "F1 = Filtrar Prod.";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label19.Location = new System.Drawing.Point(11, 119);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(78, 19);
+            this.label19.TabIndex = 88;
+            this.label19.Text = "ESC = Salir";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label18.Location = new System.Drawing.Point(11, 86);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(140, 19);
+            this.label18.TabIndex = 87;
+            this.label18.Text = "ENTER = Elegir Prod.";
+            // 
+            // btnMovimientos
+            // 
+            this.btnMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMovimientos.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovimientos.ForeColor = System.Drawing.Color.White;
+            this.btnMovimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientos.Location = new System.Drawing.Point(906, 309);
+            this.btnMovimientos.Name = "btnMovimientos";
+            this.btnMovimientos.Size = new System.Drawing.Size(180, 35);
+            this.btnMovimientos.TabIndex = 104;
+            this.btnMovimientos.Text = "Movimientos";
+            this.btnMovimientos.UseVisualStyleBackColor = false;
+            this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 106;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.DataPropertyName = "PrecioVenta";
+            this.PrecioVenta.HeaderText = "PrecioVenta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            this.PrecioVenta.Width = 110;
+            // 
+            // PrecioVentaMin
+            // 
+            this.PrecioVentaMin.DataPropertyName = "PrecioVentaMin";
+            this.PrecioVentaMin.HeaderText = "PrecioVentaMin";
+            this.PrecioVentaMin.Name = "PrecioVentaMin";
+            this.PrecioVentaMin.ReadOnly = true;
+            this.PrecioVentaMin.Width = 132;
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.DataPropertyName = "UnidadMedida";
+            this.UnidadMedida.HeaderText = "UM";
+            this.UnidadMedida.Name = "UnidadMedida";
+            this.UnidadMedida.ReadOnly = true;
+            this.UnidadMedida.Width = 50;
+            // 
+            // Existencia
+            // 
+            this.Existencia.DataPropertyName = "Existencia";
+            this.Existencia.HeaderText = "Existencia";
+            this.Existencia.Name = "Existencia";
+            this.Existencia.ReadOnly = true;
+            this.Existencia.Width = 93;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.DataPropertyName = "PrecioCompra";
+            this.PrecioCompra.HeaderText = "PrecioCompra";
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            this.PrecioCompra.Width = 126;
+            // 
             // ProductoID
             // 
             this.ProductoID.DataPropertyName = "ProductoID";
@@ -268,14 +395,6 @@
             this.CodigoBarra.ReadOnly = true;
             this.CodigoBarra.Width = 114;
             // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 106;
-            // 
             // Proveedor
             // 
             this.Proveedor.DataPropertyName = "Proveedor";
@@ -284,22 +403,6 @@
             this.Proveedor.ReadOnly = true;
             this.Proveedor.Width = 98;
             // 
-            // UnidadMedida
-            // 
-            this.UnidadMedida.DataPropertyName = "UnidadMedida";
-            this.UnidadMedida.HeaderText = "UM";
-            this.UnidadMedida.Name = "UnidadMedida";
-            this.UnidadMedida.ReadOnly = true;
-            this.UnidadMedida.Width = 50;
-            // 
-            // Existencia
-            // 
-            this.Existencia.DataPropertyName = "Existencia";
-            this.Existencia.HeaderText = "Existencia";
-            this.Existencia.Name = "Existencia";
-            this.Existencia.ReadOnly = true;
-            this.Existencia.Width = 93;
-            // 
             // ITBIS
             // 
             this.ITBIS.DataPropertyName = "ITBIS";
@@ -307,30 +410,6 @@
             this.ITBIS.Name = "ITBIS";
             this.ITBIS.ReadOnly = true;
             this.ITBIS.Width = 36;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.DataPropertyName = "PrecioCompra";
-            this.PrecioCompra.HeaderText = "PrecioCompra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Width = 126;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.DataPropertyName = "PrecioVenta";
-            this.PrecioVenta.HeaderText = "PrecioVenta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Width = 110;
-            // 
-            // PrecioVentaMin
-            // 
-            this.PrecioVentaMin.DataPropertyName = "PrecioVentaMin";
-            this.PrecioVentaMin.HeaderText = "PrecioVentaMin";
-            this.PrecioVentaMin.Name = "PrecioVentaMin";
-            this.PrecioVentaMin.ReadOnly = true;
-            this.PrecioVentaMin.Width = 132;
             // 
             // Descuento
             // 
@@ -370,6 +449,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1110, 600);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.btnMovimientos);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.btnImprimirEtiqueta);
@@ -385,6 +466,8 @@
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,17 +484,23 @@
         private System.Windows.Forms.Button btnImprimirEtiqueta;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.ComboBox cbFiltro;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnMovimientos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVentaMin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Existencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoID;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoBarra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Existencia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ITBIS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVentaMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantMax;

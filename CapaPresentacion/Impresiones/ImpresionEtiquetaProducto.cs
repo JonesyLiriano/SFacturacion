@@ -19,7 +19,7 @@ namespace CapaPresentacion.Impresiones
     public partial class ImpresionEtiquetaProducto : Form
     {
         private int cantidad;
-        ReportParameter[] parameters = new ReportParameter[4];
+        ReportParameter[] parameters = new ReportParameter[6];
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -31,10 +31,10 @@ namespace CapaPresentacion.Impresiones
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        public ImpresionEtiquetaProducto(string descripcionProd, string codigoBarra, int cantidad, string precioVenta)
+        public ImpresionEtiquetaProducto(string descripcionProd, string codigoBarra, int cantidad, string precioVenta, string precioCompra)
         {
             InitializeComponent();
-            CargarParametros(descripcionProd, codigoBarra, precioVenta);
+            CargarParametros(descripcionProd, codigoBarra, precioVenta, precioCompra);
             this.cantidad = cantidad;
         }
 
@@ -103,14 +103,16 @@ namespace CapaPresentacion.Impresiones
             }
         }
 
-        private void CargarParametros(string descripcionProd, string codigoBarra, string precioVenta)
+        private void CargarParametros(string descripcionProd, string codigoBarra, string precioVenta, string precioCompra)
         {
             try
             {
                 parameters[0] = new ReportParameter("NombreEmpresa", Properties.Settings.Default.NombreEmpresa);
                 parameters[1] = new ReportParameter("CodigoBarra", GenerarCodigoBarra(codigoBarra));
                 parameters[2] = new ReportParameter("DescripcionProducto", descripcionProd);
-                parameters[3] = new ReportParameter("PrecioVenta", precioVenta);
+                parameters[3] = new ReportParameter("PrecioVenta", ConvertirPrecioNumeroALetras(precioVenta));
+                parameters[4] = new ReportParameter("PrecioCompra", ConvertirPrecioNumeroALetras(precioCompra));
+                parameters[5] = new ReportParameter("TelefonoEtiqueta", Properties.Settings.Default.TelefonoEtiqueta);
             }
             catch (Exception exc)
             {
@@ -139,6 +141,46 @@ namespace CapaPresentacion.Impresiones
                 Loggeator.EscribeEnArchivo(exc.ToString());
                 return null;
             }
-        }       
+        }
+
+        private string ConvertirPrecioNumeroALetras(string precio)
+        {
+            string precioLetras = "";
+            for (int i = 0; i < precio.Length; i++)
+            {
+                precioLetras = String.Concat(precioLetras, BaseNumeroALetra(precio.Substring(i, 1)));
+            }
+            return precioLetras;
+        }
+
+        private string BaseNumeroALetra(string numero)
+        {
+            string palabra = Properties.Settings.Default.CodigoLetras;
+            switch (numero)
+            {
+                case "0":
+                    return palabra.Substring(9, 1);
+                case "1":
+                    return palabra.Substring(0, 1);
+                case "2":
+                    return palabra.Substring(1, 1);
+                case "3":
+                    return palabra.Substring(2, 1);
+                case "4":
+                    return palabra.Substring(3, 1);
+                case "5":
+                    return palabra.Substring(4, 1);
+                case "6":
+                    return palabra.Substring(5, 1);
+                case "7":
+                    return palabra.Substring(6, 1);
+                case "8":
+                    return palabra.Substring(7, 1);
+                case "9":
+                    return palabra.Substring(8, 1);
+                default:
+                    return "";
+            }
+        }
     }
 }

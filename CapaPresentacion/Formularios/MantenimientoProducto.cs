@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaNegocios;
+using SFacturacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace CapaPresentacion
 {
     public partial class MantenimientoProducto : Form
     {
+        Movimiento movimientoEntidad = new Movimiento();
+        MovimientoNegocio movimientoNegocio = new MovimientoNegocio();
         ProductosNegocio productosNegocio = new ProductosNegocio();
         ProveedoresNegocio proveedoresNegocio = new ProveedoresNegocio();
         Producto productoEntidad = new Producto();
@@ -32,7 +35,7 @@ namespace CapaPresentacion
         public MantenimientoProducto()
         {
             InitializeComponent();
-            CargarCbProveedores();
+            CargarCbProveedores();           
         }
 
         public MantenimientoProducto(Producto producto)
@@ -40,6 +43,7 @@ namespace CapaPresentacion
             InitializeComponent();
             CargarCbProveedores();
             LlenarTextBoxs(producto);
+            productoEntidad.Existencia = producto.Existencia;
         }
 
        
@@ -125,6 +129,17 @@ namespace CapaPresentacion
         {
             if (respuesta)
             {
+                if (!checkboxServicio.Checked)
+                {
+                    movimientoEntidad.ProductoID = productoID;
+                    movimientoEntidad.Fecha = DateTime.Now;
+                    movimientoEntidad.TipoMovimiento = "Primera Entrada";
+                    movimientoEntidad.Referencia = 0;
+                    movimientoEntidad.Cantidad = Convert.ToDecimal(productoEntidad.Existencia);
+                    movimientoEntidad.UsuarioID = Login.userID;
+                    movimientoNegocio.AgregarMovimiento(movimientoEntidad);
+                }
+
                 MessageBox.Show(string.Format("El proveedor/servicio ha sido agregado correctamente a la base de datos, con el codigo: {0}", productoID), "Producto/Servicio Agregado Correctamente!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
@@ -145,7 +160,17 @@ namespace CapaPresentacion
 
                     if (dialogResult == DialogResult.OK)
                     {
-                        
+                        if (!checkboxServicio.Checked && (Convert.ToDecimal(productoEntidad.Existencia) != Convert.ToDecimal(txtExistencia.Text)))
+                        {
+                            movimientoEntidad.ProductoID = Convert.ToInt32(txtID.Text);
+                            movimientoEntidad.Fecha = DateTime.Now;
+                            movimientoEntidad.TipoMovimiento = "Ajuste Inventario";
+                            movimientoEntidad.Referencia = 0;
+                            movimientoEntidad.Cantidad = Convert.ToDecimal(txtExistencia.Text) - Convert.ToDecimal(productoEntidad.Existencia);
+                            movimientoEntidad.UsuarioID = Login.userID;
+                            movimientoNegocio.AgregarMovimiento(movimientoEntidad);
+                        }
+
                         productoEntidad.ProductoID = Convert.ToInt32(txtID.Text);
                         productoEntidad.Servicio = checkboxServicio.Checked;
                         productoEntidad.Descripcion = txtDescripcion.Text;
@@ -299,6 +324,18 @@ namespace CapaPresentacion
             {
                 cbProveedor.Focus();
             }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.F1:
+                    btnAplicar.PerformClick();
+                    return true;
+                default:
+                    return base.ProcessCmdKey(ref msg, keyData);
+            }
+
         }
     }
 }

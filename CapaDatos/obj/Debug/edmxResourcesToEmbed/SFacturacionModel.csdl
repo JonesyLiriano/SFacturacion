@@ -79,7 +79,7 @@
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TipoPagoID" Type="Int32" Nullable="false" />
     <Property Name="TipoFacturaID" Type="Int32" Nullable="false" />
-    <Property Name="NCF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NCF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
     <Property Name="UserID" Type="Int32" Nullable="false" />
     <Property Name="RNC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -765,6 +765,7 @@
       <Parameter Name="UserID" Mode="In" Type="Int32" />
       <Parameter Name="Facturada" Mode="In" Type="Boolean" />
       <Parameter Name="DescuentoCliente" Mode="In" Type="Decimal" />
+      <Parameter Name="TipoPagoID" Mode="In" Type="Int32" />
       <Parameter Name="resultado" Mode="InOut" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="proc_InsertarDetalleCotizacion">
@@ -914,6 +915,24 @@
     <FunctionImport Name="proc_BuscarLineaDeCreditoVentaIDFactura">
       <Parameter Name="FacturaID" Mode="In" Type="Int32" />
       <Parameter Name="LineaCreditoVentaID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Movimientos" EntityType="SFacturacionModel.Movimiento" />
+    <FunctionImport Name="proc_CargarFacturasRapidaPFecha" ReturnType="Collection(SFacturacionModel.proc_CargarFacturasRapidaPFecha_Result)">
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="proc_CargarMovimientos" ReturnType="Collection(SFacturacionModel.proc_CargarMovimientos_Result)">
+      <Parameter Name="ProductoID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="proc_InsertarMovimiento">
+      <Parameter Name="MovimientoID" Mode="InOut" Type="Int32" />
+      <Parameter Name="ProductoID" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="TipoMovimiento" Mode="In" Type="String" />
+      <Parameter Name="Referencia" Mode="In" Type="Int32" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+      <Parameter Name="UsuarioID" Mode="In" Type="Int32" />
+      <Parameter Name="resultado" Mode="InOut" Type="Boolean" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="proc_BuscarProductosPorProveedor_Result">
@@ -1206,6 +1225,7 @@
     <NavigationProperty Name="Cliente" Relationship="SFacturacionModel.FK_Cotizaciones_Clientes" FromRole="Cotizacione" ToRole="Cliente" />
     <NavigationProperty Name="User" Relationship="SFacturacionModel.FK_Cotizaciones_Users" FromRole="Cotizacione" ToRole="User" />
     <NavigationProperty Name="DetalleCotizaciones" Relationship="SFacturacionModel.FK_DetalleCotizaciones_Cotizaciones" FromRole="Cotizacione" ToRole="DetalleCotizacione" />
+    <Property Name="TipoPagoID" Type="Int32" />
   </EntityType>
   <EntityType Name="DetalleCotizacione">
     <Key>
@@ -1229,6 +1249,7 @@
     <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
     <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="Factura" Nullable="true" />
+    <Property Type="String" Name="TipoDePago" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="proc_ComprobanteCotizacion_Result">
     <Property Type="Int32" Name="CotizacionID" Nullable="false" />
@@ -1246,6 +1267,7 @@
     <Property Type="String" Name="ClienteDireccion" Nullable="true" MaxLength="200" />
     <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="UnidadMedida" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoDePago" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="proc_CargarCotizacionesActivas_Result">
     <Property Type="Int32" Name="CotizacionID" Nullable="false" />
@@ -1254,6 +1276,7 @@
     <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
     <Property Type="Int32" Name="UserID" Nullable="false" />
     <Property Type="Decimal" Name="Valor" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TipoPagoID" Nullable="true" />
   </ComplexType>
   <ComplexType Name="proc_CargarProductosCotizacion_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -1614,4 +1637,45 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Movimiento">
+    <Key>
+      <PropertyRef Name="MovimientoID" />
+    </Key>
+    <Property Name="MovimientoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductoID" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TipoMovimiento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Referencia" Type="Int32" Nullable="false" />
+    <Property Name="Existencia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="proc_CargarFacturasRapidaPFecha_Result">
+    <Property Type="Int32" Name="FacturaID" Nullable="false" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ClienteID" Nullable="false" />
+    <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="DescuentoCliente" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
+    <Property Type="String" Name="TipoDePago" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoFactura" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Cotizacion" Nullable="true" />
+    <Property Type="String" Name="NCF" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FechaVencimiento" Nullable="true" />
+    <Property Type="Decimal" Name="Descuento" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ITBIS" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SubTotal" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Double" Name="Valor" Nullable="true" />
+    <Property Type="String" Name="RNC" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Entidad" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="proc_CargarMovimientos_Result">
+    <Property Type="String" Name="Producto" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="23" />
+    <Property Type="String" Name="TipoMovimiento" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Referencia" Nullable="false" />
+    <Property Type="Decimal" Name="Existencia" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+  </ComplexType>
 </Schema>

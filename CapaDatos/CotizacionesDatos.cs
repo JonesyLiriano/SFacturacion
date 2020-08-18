@@ -15,7 +15,7 @@ namespace CapaDatos
 
         public Tuple<bool, int> InsertarCotizacion(Cotizacione cotizacion)
         {
-            modelDB.proc_InsertarCotizacion(cotizacionID, cotizacion.ClienteID, cotizacion.Fecha, cotizacion.UserID, cotizacion.Facturada, cotizacion.DescuentoCliente, resultado);
+            modelDB.proc_InsertarCotizacion(cotizacionID, cotizacion.ClienteID, cotizacion.Fecha, cotizacion.UserID, cotizacion.Facturada, cotizacion.DescuentoCliente, cotizacion.TipoPagoID, resultado);
 
             return Tuple.Create((bool)resultado.Value, (int)cotizacionID.Value);
         }        

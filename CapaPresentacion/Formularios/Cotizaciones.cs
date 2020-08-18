@@ -81,10 +81,11 @@ namespace CapaPresentacion
             dgvCotizaciones.Columns["CotizacionID"].DisplayIndex = 0;
             dgvCotizaciones.Columns["Cliente"].DisplayIndex = 1;
             dgvCotizaciones.Columns["DescuentoCliente"].DisplayIndex = 2;
-            dgvCotizaciones.Columns["Fecha"].DisplayIndex = 3;
-            dgvCotizaciones.Columns["Factura"].DisplayIndex = 3;
-            dgvCotizaciones.Columns["Valor"].DisplayIndex = 4;
-            dgvCotizaciones.Columns["Usuario"].DisplayIndex = 5;
+            dgvCotizaciones.Columns["TipoDePago"].DisplayIndex = 3;
+            dgvCotizaciones.Columns["Fecha"].DisplayIndex = 4;
+            dgvCotizaciones.Columns["Factura"].DisplayIndex = 5;
+            dgvCotizaciones.Columns["Valor"].DisplayIndex = 6;
+            dgvCotizaciones.Columns["Usuario"].DisplayIndex = 7;
 
             dgvCotizaciones.Columns["DescuentoCliente"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvCotizaciones.Columns["Valor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;

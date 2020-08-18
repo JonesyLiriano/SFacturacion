@@ -72,6 +72,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSubirBackupNube = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtTelefonoEtiqueta = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtCodigoLetras = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,6 +84,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -281,7 +287,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.groupBox6.Location = new System.Drawing.Point(733, 324);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(343, 181);
+            this.groupBox6.Size = new System.Drawing.Size(343, 184);
             this.groupBox6.TabIndex = 58;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Impresora";
@@ -542,6 +548,54 @@
             this.btnSubirBackupNube.UseVisualStyleBackColor = false;
             this.btnSubirBackupNube.Click += new System.EventHandler(this.btnSubirBackupNube_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtTelefonoEtiqueta);
+            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Controls.Add(this.txtCodigoLetras);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox7.Location = new System.Drawing.Point(733, 196);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(343, 121);
+            this.groupBox7.TabIndex = 63;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Codigo Letras - Numeros";
+            // 
+            // txtTelefonoEtiqueta
+            // 
+            this.txtTelefonoEtiqueta.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtTelefonoEtiqueta.Location = new System.Drawing.Point(162, 77);
+            this.txtTelefonoEtiqueta.Name = "txtTelefonoEtiqueta";
+            this.txtTelefonoEtiqueta.Size = new System.Drawing.Size(175, 26);
+            this.txtTelefonoEtiqueta.TabIndex = 52;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label19.Location = new System.Drawing.Point(7, 77);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(131, 26);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Telefono Etiq.";
+            // 
+            // txtCodigoLetras
+            // 
+            this.txtCodigoLetras.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtCodigoLetras.Location = new System.Drawing.Point(163, 30);
+            this.txtCodigoLetras.Name = "txtCodigoLetras";
+            this.txtCodigoLetras.Size = new System.Drawing.Size(175, 26);
+            this.txtCodigoLetras.TabIndex = 50;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label18.Location = new System.Drawing.Point(8, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(131, 26);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Palabra Codigo";
+            // 
             // Configuraciones
             // 
             this.AcceptButton = this.btnGuardar;
@@ -549,6 +603,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1110, 600);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.btnSubirBackupNube);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox6);
@@ -576,6 +631,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,5 +682,10 @@
         private System.Windows.Forms.Button btnSubirBackupNube;
         private System.Windows.Forms.TextBox txtImpresoraTermica;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtTelefonoEtiqueta;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtCodigoLetras;
+        private System.Windows.Forms.Label label18;
     }
 }

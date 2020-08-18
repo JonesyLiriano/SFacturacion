@@ -59,5 +59,11 @@
     <Setting Name="ImpresoraTermica" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="CodigoLetras" Type="System.String" Scope="User">
+      <Value Profile="(Default)">REPUBLICAN</Value>
+    </Setting>
+    <Setting Name="TelefonoEtiqueta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tel: 809-222-3740</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

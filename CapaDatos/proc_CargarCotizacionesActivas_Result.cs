@@ -19,5 +19,6 @@ namespace CapaDatos
         public System.DateTime Fecha { get; set; }
         public int UserID { get; set; }
         public Nullable<decimal> Valor { get; set; }
+        public Nullable<int> TipoPagoID { get; set; }
     }
 }

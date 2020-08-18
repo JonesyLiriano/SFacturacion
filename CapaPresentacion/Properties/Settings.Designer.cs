@@ -250,5 +250,29 @@ namespace CapaPresentacion.Properties {
                 this["ImpresoraTermica"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("REPUBLICAN")]
+        public string CodigoLetras {
+            get {
+                return ((string)(this["CodigoLetras"]));
+            }
+            set {
+                this["CodigoLetras"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Tel: 809-222-3740")]
+        public string TelefonoEtiqueta {
+            get {
+                return ((string)(this["TelefonoEtiqueta"]));
+            }
+            set {
+                this["TelefonoEtiqueta"] = value;
+            }
+        }
     }
 }

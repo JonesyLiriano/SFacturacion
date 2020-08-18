@@ -32,19 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCotizaciones = new System.Windows.Forms.DataGridView();
+            this.CotizacionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescuentoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnVerDetalles = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
-            this.CotizacionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescuentoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCotizaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +91,7 @@
             this.CotizacionID,
             this.Cliente,
             this.DescuentoCliente,
+            this.TipoDePago,
             this.Fecha,
             this.Factura,
             this.Valor,
@@ -104,14 +106,87 @@
             this.dgvCotizaciones.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCotizaciones.EnableHeadersVisualStyles = false;
             this.dgvCotizaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvCotizaciones.Location = new System.Drawing.Point(38, 66);
+            this.dgvCotizaciones.Location = new System.Drawing.Point(32, 66);
             this.dgvCotizaciones.MultiSelect = false;
             this.dgvCotizaciones.Name = "dgvCotizaciones";
             this.dgvCotizaciones.ReadOnly = true;
             this.dgvCotizaciones.RowHeadersVisible = false;
+            this.dgvCotizaciones.RowHeadersWidth = 123;
             this.dgvCotizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCotizaciones.Size = new System.Drawing.Size(838, 522);
+            this.dgvCotizaciones.Size = new System.Drawing.Size(844, 399);
             this.dgvCotizaciones.TabIndex = 55;
+            // 
+            // CotizacionID
+            // 
+            this.CotizacionID.DataPropertyName = "CotizacionID";
+            this.CotizacionID.HeaderText = "ID";
+            this.CotizacionID.MinimumWidth = 15;
+            this.CotizacionID.Name = "CotizacionID";
+            this.CotizacionID.ReadOnly = true;
+            this.CotizacionID.Width = 44;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.MinimumWidth = 15;
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 77;
+            // 
+            // DescuentoCliente
+            // 
+            this.DescuentoCliente.DataPropertyName = "DescuentoCliente";
+            this.DescuentoCliente.HeaderText = "DescuentoCliente";
+            this.DescuentoCliente.MinimumWidth = 15;
+            this.DescuentoCliente.Name = "DescuentoCliente";
+            this.DescuentoCliente.ReadOnly = true;
+            this.DescuentoCliente.Width = 146;
+            // 
+            // TipoDePago
+            // 
+            this.TipoDePago.DataPropertyName = "TipoDePago";
+            this.TipoDePago.HeaderText = "TipoDePago";
+            this.TipoDePago.MinimumWidth = 15;
+            this.TipoDePago.Name = "TipoDePago";
+            this.TipoDePago.ReadOnly = true;
+            this.TipoDePago.Width = 110;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 15;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 70;
+            // 
+            // Factura
+            // 
+            this.Factura.DataPropertyName = "Factura";
+            this.Factura.HeaderText = "Factura";
+            this.Factura.MinimumWidth = 15;
+            this.Factura.Name = "Factura";
+            this.Factura.ReadOnly = true;
+            this.Factura.Width = 80;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.MinimumWidth = 15;
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Width = 65;
+            // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "Usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.MinimumWidth = 15;
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Width = 77;
             // 
             // btnCerrar
             // 
@@ -208,68 +283,12 @@
             this.cbFiltro.TabIndex = 83;
             this.cbFiltro.Validating += new System.ComponentModel.CancelEventHandler(this.cbFiltro_Validating);
             // 
-            // CotizacionID
-            // 
-            this.CotizacionID.DataPropertyName = "CotizacionID";
-            this.CotizacionID.HeaderText = "ID";
-            this.CotizacionID.Name = "CotizacionID";
-            this.CotizacionID.ReadOnly = true;
-            this.CotizacionID.Width = 44;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 77;
-            // 
-            // DescuentoCliente
-            // 
-            this.DescuentoCliente.DataPropertyName = "DescuentoCliente";
-            this.DescuentoCliente.HeaderText = "DescuentoCliente";
-            this.DescuentoCliente.Name = "DescuentoCliente";
-            this.DescuentoCliente.ReadOnly = true;
-            this.DescuentoCliente.Width = 146;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 70;
-            // 
-            // Factura
-            // 
-            this.Factura.DataPropertyName = "Factura";
-            this.Factura.HeaderText = "Factura";
-            this.Factura.Name = "Factura";
-            this.Factura.ReadOnly = true;
-            this.Factura.Width = 80;
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "Valor";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Width = 65;
-            // 
-            // Usuario
-            // 
-            this.Usuario.DataPropertyName = "Usuario";
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Width = 77;
-            // 
             // Cotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1110, 600);
+            this.ClientSize = new System.Drawing.Size(1110, 470);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.btnVerDetalles);
@@ -302,6 +321,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CotizacionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDePago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Factura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
