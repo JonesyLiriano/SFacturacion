@@ -386,6 +386,7 @@
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(116, 24);
             this.txtPrecioVenta.TabIndex = 10;
+            this.txtPrecioVenta.Leave += new System.EventHandler(this.txtPrecioVenta_Leave);
             // 
             // checkboxServicio
             // 
@@ -463,6 +464,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(643, 160);

@@ -2022,7 +2022,7 @@
             <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="proc_CargarMovimientos" ReturnType="Collection(SFacturacionModel.proc_CargarMovimientos_Result)">
-            <Parameter Name="ProductoID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductoID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="proc_InsertarMovimiento">
             <Parameter Name="MovimientoID" Mode="InOut" Type="Int32" />

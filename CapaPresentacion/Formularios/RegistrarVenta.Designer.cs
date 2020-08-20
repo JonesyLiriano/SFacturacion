@@ -82,18 +82,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cbCotizacion = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCotizar = new System.Windows.Forms.Button();
-            this.btnFacturar = new System.Windows.Forms.Button();
-            this.lblhora = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.txtITBIS = new System.Windows.Forms.TextBox();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtCantProd = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtDevuelta = new System.Windows.Forms.TextBox();
             this.txtRecibido = new System.Windows.Forms.TextBox();
@@ -111,6 +99,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtCantProd = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.txtITBIS = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.btnFacturar = new System.Windows.Forms.Button();
+            this.btnCotizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,9 +118,9 @@
             this.groupBox3.SuspendLayout();
             this.gbComprobante.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCarrito
@@ -798,172 +798,6 @@
             this.label12.TabIndex = 83;
             this.label12.Text = "# Cotizacion";
             // 
-            // btnCotizar
-            // 
-            this.btnCotizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCotizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnCotizar.FlatAppearance.BorderSize = 0;
-            this.btnCotizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCotizar.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnCotizar.ForeColor = System.Drawing.Color.White;
-            this.btnCotizar.Image = ((System.Drawing.Image)(resources.GetObject("btnCotizar.Image")));
-            this.btnCotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCotizar.Location = new System.Drawing.Point(947, 531);
-            this.btnCotizar.Name = "btnCotizar";
-            this.btnCotizar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCotizar.Size = new System.Drawing.Size(151, 47);
-            this.btnCotizar.TabIndex = 93;
-            this.btnCotizar.Text = "Cotizar";
-            this.btnCotizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCotizar.UseVisualStyleBackColor = false;
-            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
-            // 
-            // btnFacturar
-            // 
-            this.btnFacturar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFacturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnFacturar.FlatAppearance.BorderSize = 0;
-            this.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturar.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnFacturar.ForeColor = System.Drawing.Color.White;
-            this.btnFacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturar.Image")));
-            this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturar.Location = new System.Drawing.Point(947, 459);
-            this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnFacturar.Size = new System.Drawing.Size(151, 47);
-            this.btnFacturar.TabIndex = 94;
-            this.btnFacturar.Text = "Facturar";
-            this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFacturar.UseVisualStyleBackColor = false;
-            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
-            // 
-            // lblhora
-            // 
-            this.lblhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblhora.AutoSize = true;
-            this.lblhora.BackColor = System.Drawing.Color.Transparent;
-            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblhora.Location = new System.Drawing.Point(662, 434);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(90, 21);
-            this.lblhora.TabIndex = 95;
-            this.lblhora.Text = "Sub-Total";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(662, 470);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 21);
-            this.label14.TabIndex = 96;
-            this.label14.Text = "ITBIS";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(662, 509);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 21);
-            this.label15.TabIndex = 97;
-            this.label15.Text = "Descuento";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(637, 551);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 28);
-            this.label16.TabIndex = 98;
-            this.label16.Text = "Total";
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSubTotal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtSubTotal.Location = new System.Drawing.Point(777, 430);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.ReadOnly = true;
-            this.txtSubTotal.Size = new System.Drawing.Size(154, 27);
-            this.txtSubTotal.TabIndex = 94;
-            this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtITBIS
-            // 
-            this.txtITBIS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtITBIS.BackColor = System.Drawing.SystemColors.Window;
-            this.txtITBIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtITBIS.Location = new System.Drawing.Point(777, 468);
-            this.txtITBIS.Name = "txtITBIS";
-            this.txtITBIS.ReadOnly = true;
-            this.txtITBIS.Size = new System.Drawing.Size(154, 27);
-            this.txtITBIS.TabIndex = 99;
-            this.txtITBIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescuento.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtDescuento.Location = new System.Drawing.Point(777, 505);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.ReadOnly = true;
-            this.txtDescuento.Size = new System.Drawing.Size(154, 27);
-            this.txtDescuento.TabIndex = 100;
-            this.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotal.BackColor = System.Drawing.SystemColors.Info;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.txtTotal.Location = new System.Drawing.Point(730, 542);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(201, 44);
-            this.txtTotal.TabIndex = 101;
-            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtCantProd
-            // 
-            this.txtCantProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantProd.BackColor = System.Drawing.SystemColors.Info;
-            this.txtCantProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtCantProd.Location = new System.Drawing.Point(25, 42);
-            this.txtCantProd.Name = "txtCantProd";
-            this.txtCantProd.ReadOnly = true;
-            this.txtCantProd.Size = new System.Drawing.Size(66, 27);
-            this.txtCantProd.TabIndex = 102;
-            this.txtCantProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.txtCantProd);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(840, 261);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(111, 86);
-            this.groupBox4.TabIndex = 87;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "# de Items en el carrito";
-            // 
             // groupBox7
             // 
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -976,43 +810,41 @@
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.txtTarjeta);
             this.groupBox7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(632, 264);
+            this.groupBox7.Location = new System.Drawing.Point(626, 264);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(202, 162);
-            this.groupBox7.TabIndex = 105;
+            this.groupBox7.Size = new System.Drawing.Size(202, 135);
+            this.groupBox7.TabIndex = 116;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Devuelta";
             // 
             // txtDevuelta
             // 
-            this.txtDevuelta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDevuelta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDevuelta.BackColor = System.Drawing.SystemColors.Info;
             this.txtDevuelta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDevuelta.Location = new System.Drawing.Point(79, 124);
+            this.txtDevuelta.Location = new System.Drawing.Point(79, 103);
             this.txtDevuelta.Name = "txtDevuelta";
-            this.txtDevuelta.ReadOnly = true;
             this.txtDevuelta.Size = new System.Drawing.Size(117, 26);
             this.txtDevuelta.TabIndex = 109;
             this.txtDevuelta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtRecibido
             // 
-            this.txtRecibido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRecibido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRecibido.BackColor = System.Drawing.SystemColors.Info;
             this.txtRecibido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecibido.Location = new System.Drawing.Point(79, 91);
+            this.txtRecibido.Location = new System.Drawing.Point(79, 75);
             this.txtRecibido.Name = "txtRecibido";
-            this.txtRecibido.ReadOnly = true;
             this.txtRecibido.Size = new System.Drawing.Size(117, 22);
             this.txtRecibido.TabIndex = 108;
             this.txtRecibido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtEfectivo
             // 
-            this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEfectivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEfectivo.BackColor = System.Drawing.SystemColors.Window;
             this.txtEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEfectivo.Location = new System.Drawing.Point(79, 58);
+            this.txtEfectivo.Location = new System.Drawing.Point(79, 47);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(117, 22);
             this.txtEfectivo.TabIndex = 107;
@@ -1022,12 +854,12 @@
             // 
             // label26
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label26.Location = new System.Drawing.Point(6, 129);
+            this.label26.Location = new System.Drawing.Point(6, 109);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(67, 17);
             this.label26.TabIndex = 106;
@@ -1035,12 +867,12 @@
             // 
             // label24
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(6, 94);
+            this.label24.Location = new System.Drawing.Point(6, 78);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(65, 17);
             this.label24.TabIndex = 105;
@@ -1048,12 +880,12 @@
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(6, 61);
+            this.label23.Location = new System.Drawing.Point(6, 50);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(60, 17);
             this.label23.TabIndex = 104;
@@ -1061,12 +893,12 @@
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label22.Location = new System.Drawing.Point(6, 28);
+            this.label22.Location = new System.Drawing.Point(6, 24);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 17);
             this.label22.TabIndex = 103;
@@ -1074,10 +906,10 @@
             // 
             // txtTarjeta
             // 
-            this.txtTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTarjeta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTarjeta.BackColor = System.Drawing.SystemColors.Window;
             this.txtTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarjeta.Location = new System.Drawing.Point(79, 25);
+            this.txtTarjeta.Location = new System.Drawing.Point(79, 19);
             this.txtTarjeta.Name = "txtTarjeta";
             this.txtTarjeta.Size = new System.Drawing.Size(117, 22);
             this.txtTarjeta.TabIndex = 102;
@@ -1087,6 +919,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.label27);
             this.groupBox6.Controls.Add(this.label28);
             this.groupBox6.Controls.Add(this.label25);
@@ -1095,10 +928,10 @@
             this.groupBox6.Controls.Add(this.label19);
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox6.Location = new System.Drawing.Point(957, 264);
+            this.groupBox6.Location = new System.Drawing.Point(951, 264);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(143, 180);
-            this.groupBox6.TabIndex = 104;
+            this.groupBox6.Size = new System.Drawing.Size(143, 170);
+            this.groupBox6.TabIndex = 115;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ATAJOS";
             // 
@@ -1106,7 +939,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(13, 109);
+            this.label27.Location = new System.Drawing.Point(13, 104);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(124, 17);
             this.label27.TabIndex = 93;
@@ -1116,7 +949,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(13, 87);
+            this.label28.Location = new System.Drawing.Point(13, 82);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(115, 17);
             this.label28.TabIndex = 92;
@@ -1126,7 +959,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(13, 153);
+            this.label25.Location = new System.Drawing.Point(13, 148);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(76, 17);
             this.label25.TabIndex = 91;
@@ -1136,7 +969,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(13, 131);
+            this.label21.Location = new System.Drawing.Point(13, 126);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(84, 17);
             this.label21.TabIndex = 90;
@@ -1146,7 +979,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(13, 66);
+            this.label20.Location = new System.Drawing.Point(13, 61);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(106, 17);
             this.label20.TabIndex = 89;
@@ -1156,7 +989,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(13, 45);
+            this.label19.Location = new System.Drawing.Point(13, 40);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(115, 17);
             this.label19.TabIndex = 88;
@@ -1166,20 +999,186 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(13, 23);
+            this.label18.Location = new System.Drawing.Point(13, 18);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(112, 17);
             this.label18.TabIndex = 87;
             this.label18.Text = "F1 = Codigo Barra";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.txtCantProd);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(834, 264);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(111, 104);
+            this.groupBox4.TabIndex = 104;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "# de Items en el carrito";
+            // 
+            // txtCantProd
+            // 
+            this.txtCantProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCantProd.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCantProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.txtCantProd.Location = new System.Drawing.Point(24, 55);
+            this.txtCantProd.Name = "txtCantProd";
+            this.txtCantProd.ReadOnly = true;
+            this.txtCantProd.Size = new System.Drawing.Size(66, 27);
+            this.txtCantProd.TabIndex = 102;
+            this.txtCantProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Info;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(723, 553);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(201, 35);
+            this.txtTotal.TabIndex = 114;
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescuento.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescuento.Location = new System.Drawing.Point(770, 523);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.ReadOnly = true;
+            this.txtDescuento.Size = new System.Drawing.Size(154, 24);
+            this.txtDescuento.TabIndex = 113;
+            this.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtITBIS
+            // 
+            this.txtITBIS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtITBIS.BackColor = System.Drawing.SystemColors.Window;
+            this.txtITBIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtITBIS.Location = new System.Drawing.Point(770, 493);
+            this.txtITBIS.Name = "txtITBIS";
+            this.txtITBIS.ReadOnly = true;
+            this.txtITBIS.Size = new System.Drawing.Size(154, 24);
+            this.txtITBIS.TabIndex = 112;
+            this.txtITBIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTotal.Location = new System.Drawing.Point(770, 463);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(154, 24);
+            this.txtSubTotal.TabIndex = 106;
+            this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(630, 559);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 25);
+            this.label16.TabIndex = 111;
+            this.label16.Text = "Total";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(655, 525);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 20);
+            this.label15.TabIndex = 110;
+            this.label15.Text = "Descuento";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(655, 495);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 20);
+            this.label14.TabIndex = 109;
+            this.label14.Text = "ITBIS";
+            // 
+            // lblhora
+            // 
+            this.lblhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblhora.AutoSize = true;
+            this.lblhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblhora.Location = new System.Drawing.Point(655, 465);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(73, 20);
+            this.lblhora.TabIndex = 108;
+            this.lblhora.Text = "Sub-Total";
+            // 
+            // btnFacturar
+            // 
+            this.btnFacturar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFacturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnFacturar.FlatAppearance.BorderSize = 0;
+            this.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturar.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.btnFacturar.ForeColor = System.Drawing.Color.White;
+            this.btnFacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturar.Image")));
+            this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturar.Location = new System.Drawing.Point(943, 481);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFacturar.Size = new System.Drawing.Size(151, 47);
+            this.btnFacturar.TabIndex = 107;
+            this.btnFacturar.Text = "Facturar";
+            this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFacturar.UseVisualStyleBackColor = false;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
+            // 
+            // btnCotizar
+            // 
+            this.btnCotizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCotizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnCotizar.FlatAppearance.BorderSize = 0;
+            this.btnCotizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCotizar.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.btnCotizar.ForeColor = System.Drawing.Color.White;
+            this.btnCotizar.Image = ((System.Drawing.Image)(resources.GetObject("btnCotizar.Image")));
+            this.btnCotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCotizar.Location = new System.Drawing.Point(943, 541);
+            this.btnCotizar.Name = "btnCotizar";
+            this.btnCotizar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCotizar.Size = new System.Drawing.Size(151, 47);
+            this.btnCotizar.TabIndex = 105;
+            this.btnCotizar.Text = "Cotizar";
+            this.btnCotizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCotizar.UseVisualStyleBackColor = false;
+            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
             // RegistrarVenta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1110, 600);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtDescuento);
             this.Controls.Add(this.txtITBIS);
@@ -1214,12 +1213,12 @@
             this.gbComprobante.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1259,19 +1258,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox cbCotizacion;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnCotizar;
-        private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Button btnBuscarProd;
-        private System.Windows.Forms.Label lblhora;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSubTotal;
-        private System.Windows.Forms.TextBox txtITBIS;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtCantProd;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnCargarProd;
         private System.Windows.Forms.TextBox txtFechaCotizacion;
@@ -1306,5 +1293,17 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtCantProd;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtDescuento;
+        private System.Windows.Forms.TextBox txtITBIS;
+        private System.Windows.Forms.TextBox txtSubTotal;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblhora;
+        private System.Windows.Forms.Button btnFacturar;
+        private System.Windows.Forms.Button btnCotizar;
     }
 }

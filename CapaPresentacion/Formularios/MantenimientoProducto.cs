@@ -337,5 +337,18 @@ namespace CapaPresentacion
             }
 
         }
+
+        private void txtPrecioVenta_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToDecimal(txtPrecioCompra.Text) > Convert.ToDecimal(txtPrecioVenta.Text))
+                    MessageBox.Show("Precio de venta esta por debajo del precio de compra", "Verificar Precio de Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception exc)
+            {
+                Loggeator.EscribeEnArchivo(exc.ToString());
+            }
+        }
     }
 }
